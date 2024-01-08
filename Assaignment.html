@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+<body>
+    <script>
+        //Task 1 Array in find Even Or Odd(Using for of for in)
+        let array=[1,2,3,4,5,6,7,8,9];
+        let even=[]
+        let odd=[]
+        for(let num of array){
+            if(num%2==0){
+                even.push(num)
+            }else{
+                odd.push(num)
+            }
+        }
+        console.log("Even number "+even);
+        console.log("Odd number "+odd);
+
+        let array1=[1,2,3,4,5,6,7,8,9];
+        let even1=[]
+        let odd1=[]
+        for(let num in array){
+            if(num%2==0){
+                even1.push(num)
+            }else{
+                odd1.push(num)
+            }
+        }
+        console.log("Odd number indexes "+even1);
+        console.log("Even number indexes "+odd1);
+
+
+        //Task2 Reverse an Array both predefined And Normal
+
+        let reverse=[1,2,3,4,5,6,7,8,9];
+        let rev=[];
+        for(let i=reverse.length-1;i>=0;i--){
+            rev.push(reverse[i]);
+        }
+        console.log(rev);
+
+        let reverse1=[1,2,3,4,5];
+
+        let result=reverse1.reverse();
+
+        console.log(result);
+
+        // Task3 Ascending And Descending Order in both strings and numbers using sort and normal
+        //Ascending
+        var array2=[8,1,7,9,2,0,4,9,8,8];
+        for(var i=0;i<=array.length;i++){
+            for(var j=0;j<=i;j++){
+                if(array2[i]<array2[j]){
+                    var temp=array2[i];
+                    array2[i]=array2[j];
+                    array2[j]=temp;
+                }
+            }
+        }
+        console.log(array2)
+
+        //Descending
+        var array2=[8,1,7,9,2,0,4,9,8,8];
+        for(var i=0;i<=array.length;i++){
+            for(var j=0;j<=i;j++){
+                if(array2[i]>array2[j]){
+                    var temp=array2[i];
+                    array2[i]=array2[j];
+                    array2[j]=temp;
+                }
+            }
+        }
+        console.log(array2)
+
+        //Predefined Ascending and Descending
+        //Ascending
+        let number=[2,3,3,4,55,66,78,12,6]
+        number.sort((a,b)=>a-b)
+        console.log(number)
+
+        //Descending
+        number.sort((a,b)=>b-a)
+        console.log(number);
+
+        //strings
+        var str=["Rajesh","Yamini","Venkat","Balayya","Tarak"];
+        //Ascending
+        str.sort();
+        console.log(str);
+        //Descending
+        str.sort().reverse();
+        console.log(str);
+
+      //Task4 palindrome both number and string
+      function palindrome(num) {
+        var numStr=num.toString();
+        var revStr=numStr.split("").reverse().join("");
+        if(num==revStr)
+            console.log(num+" Is Palindrome")
+        else
+            console.log(num+" Is not a Palindrome")
+        
+        
+      }
+      palindrome("MOMA");
+
+
+
+
+
+
+
+        
+
+        
+    </script>
+</body>
+</html>
